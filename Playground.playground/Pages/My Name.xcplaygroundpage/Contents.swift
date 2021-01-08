@@ -74,6 +74,31 @@ canvas.drawEllipse(at: Point(x: 150, y: 280), width: 125, height: 130)
 canvas.fillColor = Color.white
 canvas.drawEllipse(at: Point(x: 150, y: 280), width: 50, height: 80)
 
+canvas.fillColor = Color.black
+canvas.drawEllipse(at: Point(x: 95, y: 310), width: 50, height: 50)
+
+canvas.drawEllipse(at: Point(x: 205, y: 310), width: 50, height: 50)
+
+canvas.drawEllipse(at: Point(x: 120, y: 220), width: 50, height: 50)
+
+canvas.drawEllipse(at: Point(x: 180, y: 220), width: 50, height: 50)
+
+canvas.fillColor = Color.white
+canvas.drawEllipse(at: Point(x: 120, y: 205), width: 15, height: 10)
+
+canvas.drawEllipse(at: Point(x: 120, y: 215), width: 4, height: 4)
+
+canvas.drawEllipse(at: Point(x: 125, y: 213), width: 4, height: 4)
+
+canvas.drawEllipse(at: Point(x: 115, y: 213), width: 4, height: 4)
+
+canvas.drawEllipse(at: Point(x: 180, y: 205), width: 15, height: 10)
+
+canvas.drawEllipse(at: Point(x: 180, y: 215), width: 4, height: 4)
+
+canvas.drawEllipse(at: Point(x: 185, y: 213), width: 4, height: 4)
+
+canvas.drawEllipse(at: Point(x: 175, y: 213), width: 4, height: 4)
 /*:
  ## Show the Live View
  Don't see any results?
