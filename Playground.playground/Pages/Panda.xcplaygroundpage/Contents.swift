@@ -38,19 +38,24 @@ PlaygroundPage.current.liveView = canvas
 
 // Drawing A Panda (class #2-4)
 
+//adding borders
+canvas.drawShapesWithBorders = true
+
 //sky
-canvas.fillColor = Color.blue
+canvas.fillColor = Color.init(hue: 170, saturation: 100, brightness: 100, alpha: 100)
 canvas.drawRectangle(at: Point(x: 0, y: 295), width: 500, height: 650)
 
 //grass
-canvas.fillColor = Color.green
+canvas.fillColor = Color.init(hue: 140, saturation: 100, brightness: 40, alpha: 100)
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 500, height: 295)
 
 //grid+scale
 canvas.drawAxes(withScale: true, by: 50)
 
 //sun
+
 canvas.fillColor = Color.yellow
+
 canvas.drawEllipse(at: Point(x: 375, y: 525), width: 100, height: 100)
 
 canvas.drawCurve(from: Point(x: 373, y: 475), to: Point(x: 377, y: 475), control1: Point(x: 375, y: 430), control2: Point(x: 375, y: 430))
@@ -69,8 +74,6 @@ canvas.drawCurve(from: Point(x: 345, y: 485), to: Point(x: 340, y: 490), control
 
 canvas.drawCurve(from: Point(x: 335, y: 555), to: Point(x: 340, y: 560), control1: Point(x: 305, y: 600), control2: Point(x: 305, y: 600))
 
-//adding borders
-canvas.drawShapesWithBorders = true
 
 //Head
 canvas.fillColor = Color.white
@@ -151,6 +154,20 @@ canvas.drawEllipse(at: Point(x: 180, y: 215), width: 4, height: 4)
 canvas.drawEllipse(at: Point(x: 185, y: 213), width: 4, height: 4)
 
 canvas.drawEllipse(at: Point(x: 175, y: 213), width: 4, height: 4)
+
+//Bamboo Stick
+canvas.fillColor = Color.green
+canvas.drawRectangle(at: Point(x: 220, y: 245), width: 10, height: 35)
+
+canvas.drawRectangle(at: Point(x: 220, y: 282), width: 10, height: 35)
+
+canvas.drawRectangle(at: Point(x: 220, y: 319), width: 10, height: 35)
+
+canvas.drawRectangle(at: Point(x: 220, y: 356), width: 10, height: 17)
+
+canvas.drawRectangle(at: Point(x: 220, y: 225), width: 10, height: 17)
+
+
 
 
 /*:
