@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 300
-let preferredHeight = 600
+let preferredWidth = 500
+let preferredHeight = 650
 /*:
  ## Required code
  
@@ -36,18 +36,38 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Drawing A Panda (class #2-3)
+// Drawing A Panda (class #2-4)
 
 //sky
 canvas.fillColor = Color.blue
-canvas.drawRectangle(at: Point(x: 0, y: 295), width: 300, height: 225)
+canvas.drawRectangle(at: Point(x: 0, y: 295), width: 500, height: 650)
 
 //grass
 canvas.fillColor = Color.green
-canvas.drawRectangle(at: Point(x: 0, y: 150), width: 300, height: 145)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 500, height: 295)
 
 //grid+scale
 canvas.drawAxes(withScale: true, by: 50)
+
+//sun
+canvas.fillColor = Color.yellow
+canvas.drawEllipse(at: Point(x: 375, y: 525), width: 100, height: 100)
+
+canvas.drawCurve(from: Point(x: 373, y: 475), to: Point(x: 377, y: 475), control1: Point(x: 375, y: 430), control2: Point(x: 375, y: 430))
+
+canvas.drawCurve(from: Point(x: 325, y: 523), to: Point(x: 325, y: 527), control1: Point(x: 275, y: 525), control2: Point(x: 275, y: 525))
+
+canvas.drawCurve(from: Point(x: 373, y: 575), to: Point(x: 377, y: 575), control1: Point(x: 375, y: 625), control2: Point(x: 375, y: 625))
+
+canvas.drawCurve(from: Point(x: 425, y: 523), to: Point(x: 425, y: 527), control1: Point(x: 470, y: 525), control2: Point(x: 470, y: 525))
+
+canvas.drawCurve(from: Point(x: 405, y: 565), to: Point(x: 410, y: 560), control1: Point(x: 450, y: 600), control2: Point(x: 450, y: 600))
+
+canvas.drawCurve(from: Point(x: 405, y: 485), to: Point(x: 410, y: 488), control1: Point(x: 450, y: 445), control2: Point(x: 450, y: 445))
+
+canvas.drawCurve(from: Point(x: 345, y: 485), to: Point(x: 340, y: 490), control1: Point(x: 300, y: 465), control2: Point(x: 300, y: 465))
+
+canvas.drawCurve(from: Point(x: 335, y: 555), to: Point(x: 340, y: 560), control1: Point(x: 305, y: 600), control2: Point(x: 305, y: 600))
 
 //adding borders
 canvas.drawShapesWithBorders = true
