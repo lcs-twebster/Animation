@@ -36,8 +36,60 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Geometric Line Pattern
 
+//Axis + scale
+canvas.drawAxes(withScale: true, by: 50)
+
+//Lines Bottom
+canvas.drawLine(from: Point(x: 0, y: 0), to: Point(x: 600, y: 50))
+
+canvas.drawLine(from: Point(x: 50, y: 0), to: Point(x: 600, y: 100))
+
+canvas.drawLine(from: Point(x: 100, y: 0), to: Point(x: 600, y: 150))
+
+canvas.drawLine(from: Point(x: 150, y: 0), to: Point(x: 600, y: 200))
+
+canvas.drawLine(from: Point(x: 200, y: 0), to: Point(x: 600, y: 250))
+
+canvas.drawLine(from: Point(x: 250, y: 0), to: Point(x: 600, y: 300))
+
+canvas.drawLine(from: Point(x: 300, y: 0), to: Point(x: 600, y: 350))
+
+canvas.drawLine(from: Point(x: 350, y: 0), to: Point(x: 600, y: 400))
+
+canvas.drawLine(from: Point(x: 400, y: 0), to: Point(x: 600, y: 450))
+
+canvas.drawLine(from: Point(x: 450, y: 0), to: Point(x: 600, y: 500))
+
+canvas.drawLine(from: Point(x: 500, y: 0), to: Point(x: 600, y: 550))
+
+canvas.drawLine(from: Point(x: 550, y: 0), to: Point(x: 600, y: 600))
+
+//Lines Top
+canvas.drawLine(from: Point(x: 600, y: 600), to: Point(x: 0, y: 550))
+
+canvas.drawLine(from: Point(x: 550, y: 600), to: Point(x: 0, y: 500))
+
+canvas.drawLine(from: Point(x: 500, y: 600), to: Point(x: 0, y: 450))
+
+canvas.drawLine(from: Point(x: 450, y: 600), to: Point(x: 0, y: 400))
+
+canvas.drawLine(from: Point(x: 400, y: 600), to: Point(x: 0, y: 350))
+
+canvas.drawLine(from: Point(x: 350, y: 600), to: Point(x: 0, y: 300))
+
+canvas.drawLine(from: Point(x: 300, y: 600), to: Point(x: 0, y: 250))
+
+canvas.drawLine(from: Point(x: 250, y: 600), to: Point(x: 0, y: 200))
+
+canvas.drawLine(from: Point(x: 200, y: 600), to: Point(x: 0, y: 150))
+
+canvas.drawLine(from: Point(x: 150, y: 600), to: Point(x: 0, y: 100))
+
+canvas.drawLine(from: Point(x: 100, y: 600), to: Point(x: 0, y: 50))
+
+canvas.drawLine(from: Point(x: 50, y: 600), to: Point(x: 0, y: 0))
 
 /*:
  ## Show the Live View
