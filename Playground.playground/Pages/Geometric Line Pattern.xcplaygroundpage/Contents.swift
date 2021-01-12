@@ -41,7 +41,7 @@ PlaygroundPage.current.liveView = canvas
 //Axis + scale
 canvas.drawAxes(withScale: true, by: 50)
 
-//Lines Bottom
+//Lines Bottom Right
 canvas.drawLine(from: Point(x: 0, y: 0), to: Point(x: 600, y: 50))
 
 canvas.drawLine(from: Point(x: 50, y: 0), to: Point(x: 600, y: 100))
@@ -66,7 +66,7 @@ canvas.drawLine(from: Point(x: 500, y: 0), to: Point(x: 600, y: 550))
 
 canvas.drawLine(from: Point(x: 550, y: 0), to: Point(x: 600, y: 600))
 
-//Lines Top
+//Lines Top Left
 canvas.drawLine(from: Point(x: 600, y: 600), to: Point(x: 0, y: 550))
 
 canvas.drawLine(from: Point(x: 550, y: 600), to: Point(x: 0, y: 500))
@@ -90,6 +90,31 @@ canvas.drawLine(from: Point(x: 150, y: 600), to: Point(x: 0, y: 100))
 canvas.drawLine(from: Point(x: 100, y: 600), to: Point(x: 0, y: 50))
 
 canvas.drawLine(from: Point(x: 50, y: 600), to: Point(x: 0, y: 0))
+
+//Lines Bottom Left
+canvas.drawLine(from: Point(x: 0, y: 600), to: Point(x: 50, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 550), to: Point(x: 100, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 500), to: Point(x: 150, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 450), to: Point(x: 200, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 400), to: Point(x: 250, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 350), to: Point(x: 300, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 300), to: Point(x: 350, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 250), to: Point(x: 400, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 200), to: Point(x: 450, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 150), to: Point(x: 500, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 100), to: Point(x: 550, y: 0))
+
+canvas.drawLine(from: Point(x: 0, y: 50), to: Point(x: 600, y: 0))
 
 /*:
  ## Show the Live View
