@@ -41,29 +41,45 @@ PlaygroundPage.current.liveView = canvas
 //Axis + scale
 canvas.drawAxes(withScale: true, by: 50)
 
+//Background color
+canvas.fillColor = Color.init(hue: 100, saturation: 30, brightness: 80, alpha: 100)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
+
 //Lines Bottom Right
+canvas.lineColor = Color.green
 canvas.drawLine(from: Point(x: 0, y: 0), to: Point(x: 600, y: 50))
 
+canvas.lineColor = Color.yellow
 canvas.drawLine(from: Point(x: 50, y: 0), to: Point(x: 600, y: 100))
 
+canvas.lineColor = Color.init(hue: 170, saturation: 100, brightness: 100, alpha: 100)
 canvas.drawLine(from: Point(x: 100, y: 0), to: Point(x: 600, y: 150))
 
+canvas.lineColor = Color.init(hue: 280, saturation: 100, brightness: 50, alpha: 100)
 canvas.drawLine(from: Point(x: 150, y: 0), to: Point(x: 600, y: 200))
 
+canvas.lineColor = Color.init(hue: 240, saturation: 100, brightness: 45, alpha: 100)
 canvas.drawLine(from: Point(x: 200, y: 0), to: Point(x: 600, y: 250))
 
+canvas.lineColor = Color.red
 canvas.drawLine(from: Point(x: 250, y: 0), to: Point(x: 600, y: 300))
 
+canvas.lineColor = Color.init(hue: 220, saturation: 100, brightness: 50, alpha: 100)
 canvas.drawLine(from: Point(x: 300, y: 0), to: Point(x: 600, y: 350))
 
+canvas.lineColor = Color.init(hue: 359, saturation: 45, brightness: 75, alpha: 100)
 canvas.drawLine(from: Point(x: 350, y: 0), to: Point(x: 600, y: 400))
 
+canvas.lineColor = Color.init(hue: 140, saturation: 50, brightness: 30, alpha: 100)
 canvas.drawLine(from: Point(x: 400, y: 0), to: Point(x: 600, y: 450))
 
+canvas.lineColor = Color.init(hue: 240, saturation: 100, brightness: 90, alpha: 100)
 canvas.drawLine(from: Point(x: 450, y: 0), to: Point(x: 600, y: 500))
 
+canvas.lineColor = Color.yellow
 canvas.drawLine(from: Point(x: 500, y: 0), to: Point(x: 600, y: 550))
 
+canvas.lineColor = Color.green
 canvas.drawLine(from: Point(x: 550, y: 0), to: Point(x: 600, y: 600))
 
 //Lines Top Left
