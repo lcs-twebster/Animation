@@ -116,6 +116,29 @@ canvas.drawLine(from: Point(x: 0, y: 100), to: Point(x: 550, y: 0))
 
 canvas.drawLine(from: Point(x: 0, y: 50), to: Point(x: 600, y: 0))
 
+//Lines Top Right
+canvas.drawLine(from: Point(x: 600, y: 0), to: Point(x: 550, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 50), to: Point(x: 500, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 100), to: Point(x: 450, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 150), to: Point(x: 400, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 200), to: Point(x: 350, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 250), to: Point(x: 300, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 300), to: Point(x: 250, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 350), to: Point(x: 200, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 400), to: Point(x: 150, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 450), to: Point(x: 100, y: 600))
+
+canvas.drawLine(from: Point(x: 600, y: 500), to: Point(x: 50, y: 600))
+canvas.drawLine(from: Point(x: 600, y: 550), to: Point(x: 0, y: 600))
 /*:
  ## Show the Live View
  Don't see any results?
