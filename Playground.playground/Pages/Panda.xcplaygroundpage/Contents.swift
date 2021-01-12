@@ -167,7 +167,42 @@ canvas.drawRectangle(at: Point(x: 220, y: 356), width: 10, height: 17)
 
 canvas.drawRectangle(at: Point(x: 220, y: 225), width: 10, height: 17)
 
+//baby panda
 
+//body
+canvas.fillColor = Color.black
+canvas.drawEllipse(at: Point(x: 360, y: 150), width: 125, height: 75)
+
+//head
+canvas.fillColor = Color.white
+canvas.drawEllipse(at: Point(x: 300, y: 200), width: 75, height: 75)
+
+//ear
+canvas.fillColor = Color.black
+canvas.drawEllipse(at: Point(x: 300, y: 235), width: 25, height: 30)
+
+//eye
+canvas.drawEllipse(at: Point(x: 280, y: 200), width: 15, height: 15)
+
+//eye white
+canvas.fillColor = Color.white
+canvas.drawEllipse(at: Point(x: 278, y: 199), width: 5, height: 6)
+
+//mouth
+canvas.drawCurve(from: Point(x: 272, y: 175), to: Point(x: 286, y: 179), control1: Point(x: 275, y: 173), control2: Point(x: 276, y: 174))
+
+//feet
+canvas.fillColor = Color.black
+canvas.drawEllipse(at: Point(x: 325, y: 115), width: 25, height: 35)
+
+canvas.drawEllipse(at: Point(x: 400, y: 115), width: 25, height: 35)
+
+//Tail
+canvas.drawEllipse(at: Point(x: 418, y: 165), width: 25, height: 40)
+
+//white tummy
+canvas.fillColor = Color.white
+canvas.drawEllipse(at: Point(x: 362, y: 115), width: 45, height: 7)
 
 
 /*:
