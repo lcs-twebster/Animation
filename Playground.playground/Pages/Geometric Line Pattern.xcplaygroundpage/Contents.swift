@@ -39,7 +39,7 @@ PlaygroundPage.current.liveView = canvas
 // Geometric Line Pattern
 
 //Axis + scale
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 
 //Background color
 canvas.fillColor = Color.init(hue: 100, saturation: 100, brightness: 0, alpha: 70)
@@ -244,6 +244,7 @@ canvas.drawLine(from: Point(x: 600, y: 500), to: Point(x: 50, y: 600))
 //12
 canvas.lineColor = Color.green
 canvas.drawLine(from: Point(x: 600, y: 550), to: Point(x: 0, y: 600))
+
 /*:
  ## Show the Live View
  Don't see any results?
