@@ -58,6 +58,11 @@ verticiesOfShape1.append(Point(x: 500, y: 0))
 verticiesOfShape1.append(Point(x: 450, y: 0))
 canvas.drawCustomShape(with: verticiesOfShape1)
 
+canvas.drawLine(from: Point(x: 475, y: 175), to: Point(x: 500, y: 125))
+canvas.drawLine(from: Point(x: 500, y: 125), to: Point(x: 475, y: 25))
+canvas.drawLine(from: Point(x: 500, y: 125), to: Point(x: 463, y: 95))
+canvas.drawLine(from: Point(x: 500, y: 125), to: Point(x: 518, y: 110))
+
 // back Left foot + leg (shape 2)
 
 
@@ -69,6 +74,11 @@ verticiesOfShape2.append(Point(x: 350, y: 25))
 verticiesOfShape2.append(Point(x: 325, y: 0))
 verticiesOfShape2.append(Point(x: 375, y: 0))
 canvas.drawCustomShape(with: verticiesOfShape2)
+
+canvas.drawLine(from: Point(x: 350, y: 174), to: Point(x: 325, y: 125))
+canvas.drawLine(from: Point(x: 325, y: 125), to: Point(x: 350, y: 25))
+canvas.drawLine(from: Point(x: 325, y: 125), to: Point(x: 362, y: 95))
+canvas.drawLine(from: Point(x: 325, y: 125), to: Point(x: 305, y: 110))
 
 //Left front leg (shape 3)
 canvas.fillColor = Color.red
@@ -235,6 +245,55 @@ verticiesOfShape16.append(Point(x: 175, y: 450))
 verticiesOfShape16.append(Point(x: 50, y: 325))
 verticiesOfShape16.append(Point(x: 225, y: 275))
 canvas.drawCustomShape(with: verticiesOfShape16)
+
+//left eye (shape 17)
+canvas.fillColor = Color.white
+
+var verticiesOfShape17: [Point] = []
+verticiesOfShape17.append(Point(x: 374, y: 463))
+verticiesOfShape17.append(Point(x: 383, y: 475))
+verticiesOfShape17.append(Point(x: 363, y: 475))
+verticiesOfShape17.append(Point(x: 374, y: 463))
+canvas.drawCustomShape(with: verticiesOfShape17)
+
+//right eye (shape 18)
+var verticiesOfShape18: [Point] = []
+verticiesOfShape18.append(Point(x: 452, y: 463))
+verticiesOfShape18.append(Point(x: 463, y: 475))
+verticiesOfShape18.append(Point(x: 443, y: 475))
+verticiesOfShape18.append(Point(x: 452, y: 463))
+canvas.drawCustomShape(with: verticiesOfShape18)
+
+//muzzle (shape 19)
+canvas.fillColor = Color.purple
+
+var verticiesOfShape19: [Point] = []
+verticiesOfShape19.append(Point(x: 425, y: 460))
+verticiesOfShape19.append(Point(x: 437, y: 437))
+verticiesOfShape19.append(Point(x: 440, y: 420))
+verticiesOfShape19.append(Point(x: 426, y: 405))
+verticiesOfShape19.append(Point(x: 412.5, y: 390))
+verticiesOfShape19.append(Point(x: 399, y: 405))
+verticiesOfShape19.append(Point(x: 385, y: 420))
+verticiesOfShape19.append(Point(x: 388, y: 437))
+verticiesOfShape19.append(Point(x: 400, y: 460))
+verticiesOfShape19.append(Point(x: 425, y: 460))
+canvas.drawCustomShape(with: verticiesOfShape19)
+
+canvas.drawLine(from: Point(x: 426, y: 405), to: Point(x: 437, y: 437))
+canvas.drawLine(from: Point(x: 399, y: 405), to: Point(x: 388, y: 437))
+
+//nose (shape 20)
+canvas.fillColor = Color.black
+
+var verticiesOfShape20: [Point] = []
+verticiesOfShape20.append(Point(x: 426, y: 405))
+verticiesOfShape20.append(Point(x: 412.5, y: 390))
+verticiesOfShape20.append(Point(x: 399, y: 405))
+verticiesOfShape20.append(Point(x: 405, y: 408))
+verticiesOfShape20.append(Point(x: 420, y: 408))
+verticiesOfShape20.append(Point(x: 426, y: 405))
+canvas.drawCustomShape(with: verticiesOfShape20)
 
 
 
