@@ -41,6 +41,10 @@ PlaygroundPage.current.liveView = canvas
 //Axis+scale
 canvas.drawAxes(withScale: true, by: 50)
 
+//adding borders
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.white
+
 //Right foot + leg
 
 var verticiesOfSomeShape: [Point] = []
@@ -64,7 +68,6 @@ verticiesOfSomeShape.append(Point(x: 375, y: 0))
 canvas.drawCustomShape(with: verticiesOfSomeShape)
 
 //Left front leg
-canvas.fillColor = Color.init(hue: 100, saturation: 10, brightness: 10, alpha: 100)
 
 verticiesOfSomeShape.append(Point(x: 375, y: 0))
 verticiesOfSomeShape.append(Point(x: 330, y: 325))
@@ -74,12 +77,35 @@ verticiesOfSomeShape.append(Point(x: 375, y: 0))
 canvas.drawCustomShape(with: verticiesOfSomeShape)
 
 //right front leg
+
 verticiesOfSomeShape.append(Point(x: 425, y: 0))
 verticiesOfSomeShape.append(Point(x: 425, y: 250))
 verticiesOfSomeShape.append(Point(x: 495, y: 325))
 verticiesOfSomeShape.append(Point(x: 450, y: 0))
 verticiesOfSomeShape.append(Point(x: 425, y: 0))
 canvas.drawCustomShape(with: verticiesOfSomeShape)
+
+//chest + head
+
+verticiesOfSomeShape.append(Point(x: 495, y: 325))
+verticiesOfSomeShape.append(Point(x: 450, y: 400))
+verticiesOfSomeShape.append(Point(x: 500, y: 450))
+verticiesOfSomeShape.append(Point(x: 485, y: 500))
+verticiesOfSomeShape.append(Point(x: 450, y: 525))
+verticiesOfSomeShape.append(Point(x: 412.5, y: 540))
+verticiesOfSomeShape.append(Point(x: 375, y: 525))
+verticiesOfSomeShape.append(Point(x: 340, y: 500))
+verticiesOfSomeShape.append(Point(x: 325, y: 450))
+verticiesOfSomeShape.append(Point(x: 375, y: 400))
+verticiesOfSomeShape.append(Point(x: 330, y: 325))
+verticiesOfSomeShape.append(Point(x: 400, y: 250))
+verticiesOfSomeShape.append(Point(x: 412.5, y: 240))
+verticiesOfSomeShape.append(Point(x: 425, y: 250))
+verticiesOfSomeShape.append(Point(x: 495, y: 325))
+canvas.drawCustomShape(with: verticiesOfSomeShape)
+
+// inbetween front legs
+
 /*:
  ## Show the Live View
  Don't see any results?
