@@ -36,8 +36,36 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+// Drawing a Sunset
+
+//Grid + Scale
+canvas.drawAxes(withScale: true, by: 50)
+
+//Iterate over the y values to draw horizontal lines
+for value in stride(from: 150,
+                through: 600,
+                by: 1) {
+    //see the y values for reference
+    value
+    
+    //set the colours
+    let currentColor = Color.init(hue: 240 + value, saturation: 80, brightness: 80, alpha: 100)
+    
+    canvas.lineColor = currentColor
+    
+    //draw the lines
+    canvas.drawLine(from: Point(x: 0, y: value), to: Point(x: 600, y: value))
+    
+}
+
+// cloud #1
+canvas.fillColor = Color.white
+
+canvas.drawEllipse(at: Point(x: 100, y: 550), width: 75, height: 50)
+
+canvas.drawEllipse(at: Point(x: 130, y: 515), width: 80, height: 40)
+
+canvas.drawEllipse(at: Point(x: 75, y: 510), width: 75, height: 55)
 
 /*:
  ## Show the Live View
