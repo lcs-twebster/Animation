@@ -41,31 +41,43 @@ PlaygroundPage.current.liveView = canvas
 //Axes + Scale
 canvas.drawAxes(withScale: true, by: 50)
 
-// Drawing the square that goes from green to black
+
+//background
 //iterate over the y values to draw horizontal lines
-for y in stride(from: 100,
-                through: 200,
-                by: 1) {
- //see the y values for reference
-    y
+for value in stride(from: 0,
+                    through: 600,
+                    by: 1) {
+    // see the y values for reference
+    value
     
-// set the colours (high to low brightness)
-    let currentColor = Color.init(hue: 150, saturation: 100, brightness: y, alpha: 100)
-    canvas.lineColor = currentColor
+    //set the hue
+let hue = map(value: Double(value),
+              fromLower: 0,
+              fromUpper: 600,
+              toLower: 120,
+              toUpper: 240)
     
-// change line width
-    canvas.defaultLineWidth = 2
+    //set the brightness
+let brightness = map(value: Double(value),
+                     fromLower: 0,
+                     fromUpper: 600,
+                     toLower: 70,
+                     toUpper: 80)
+
+    //set the colour
+let color = Color(hue: Int(hue), saturation: 100, brightness: Int(brightness), alpha: 80)
     
-// draw the lines
-    canvas.drawLine(from: Point(x: 50, y: y), to: Point(x: 150, y: y))
+    // set the line colour
+    canvas.lineColor = color
     
+    //draw the lines
+    canvas.drawLine(from: Point(x: 0, y: value), to: Point(x: 600, y: value))
 }
 
-
-//Drawing a rectangle that goes from blue to black
+//left top wing
 //iterate over the x values to draw vertical lines
-for x in stride(from: 150,
-                through: 350,
+for x in stride(from: 100,
+                through: 250,
                 by: 1) {
     
     //see the x values for reference
@@ -76,11 +88,79 @@ for x in stride(from: 150,
     canvas.lineColor = currentColor
     
     //change line width
-    canvas.defaultLineWidth = 100
+    canvas.defaultLineWidth = 80
     
     //draw the lines
     canvas.drawLine(from: Point(x: x, y: 350), to: Point(x: x, y: 350))
 }
+
+//right top wing
+//iterate over the x values to draw vertical lines
+for x in stride(from: 350,
+                through: 500,
+                by: 1) {
+    
+    //see the x values for reference
+    x
+    
+    //set the colours
+    let currentColor = Color.init(hue: 240, saturation: 100, brightness: x, alpha: 100)
+    canvas.lineColor = currentColor
+    
+    //change line width
+    canvas.defaultLineWidth = 80
+    
+    //draw the lines
+    canvas.drawLine(from: Point(x: x, y: 350), to: Point(x: x, y: 350))
+}
+
+//right bottom wing
+//iterate over the x values to draw vertical lines
+for x in stride(from: 350,
+                through: 500,
+                by: 1) {
+    
+    //see the x values for reference
+    x
+    
+    //set the colours
+    let currentColor = Color.init(hue: 240, saturation: 100, brightness: x, alpha: 100)
+    canvas.lineColor = currentColor
+    
+    //change line width
+    canvas.defaultLineWidth = 40
+    
+    //draw the lines
+    canvas.drawLine(from: Point(x: x, y: 260), to: Point(x: x, y: 260))
+}
+
+//left bottom wing
+//iterate over the x values to draw vertical lines
+for x in stride(from: 100,
+                through: 250,
+                by: 1) {
+    
+    //see the x values for reference
+    x
+    
+    //set the colours
+    let currentColor = Color.init(hue: 240, saturation: 100, brightness: x, alpha: 100)
+    canvas.lineColor = currentColor
+    
+    //change line width
+    canvas.defaultLineWidth = 40
+    
+    //draw the lines
+    canvas.drawLine(from: Point(x: x, y: 260), to: Point(x: x, y: 260))
+}
+
+//body
+canvas.fillColor = Color.black
+canvas.drawEllipse(at: Point(x: 300, y: 250), width: 50, height: 450)
+
+//eyes
+canvas.drawEllipse(at: Point(x: 285, y: 435), width: 25, height: 25)
+canvas.drawEllipse(at: Point(x: 315, y: 435), width: 25, height: 25)
 /*:
  ## Show the Live View
  Don't see any results?
