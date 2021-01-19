@@ -41,21 +41,39 @@ PlaygroundPage.current.liveView = canvas
 //Grid + Scale
 canvas.drawAxes(withScale: true, by: 50)
 
+
 //Iterate over the y values to draw horizontal lines
 for value in stride(from: 150,
-                through: 600,
-                by: 1) {
+                    through: 600,
+                    by: 1) {
+    
     //see the y values for reference
     value
     
-    //set the colours
-    let currentColor = Color.init(hue: 240 + value, saturation: 80, brightness: 80, alpha: 100)
+// set the hue
+    let hue = map(value: Double(value),
+                  fromLower: 150,
+                  fromUpper: 600,
+                  toLower: 290,
+                  toUpper: 390)
     
-    canvas.lineColor = currentColor
+//set the brightness
+    let brightness = map(value: Double(value),
+                         fromLower: 150,
+                         fromUpper: 600,
+                         toLower: 25,
+                         toUpper: 100)
+// set a colour
+    let color = Color(hue: Int(hue),
+                      saturation: 80,
+                      brightness: Int(brightness),
+                      alpha: 100)
     
-    //draw the lines
+//set the line colour
+    canvas.lineColor = color
+    
+//draw the lines
     canvas.drawLine(from: Point(x: 0, y: value), to: Point(x: 600, y: value))
-    
 }
 
 // cloud #1

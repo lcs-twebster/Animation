@@ -36,9 +36,51 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+// Practicing using iteration and gradient
 
+//Axes + Scale
+canvas.drawAxes(withScale: true, by: 50)
+
+// Drawing the square that goes from green to black
+//iterate over the y values to draw horizontal lines
+for y in stride(from: 100,
+                through: 200,
+                by: 1) {
+ //see the y values for reference
+    y
+    
+// set the colours (high to low brightness)
+    let currentColor = Color.init(hue: 150, saturation: 100, brightness: y, alpha: 100)
+    canvas.lineColor = currentColor
+    
+// change line width
+    canvas.defaultLineWidth = 2
+    
+// draw the lines
+    canvas.drawLine(from: Point(x: 50, y: y), to: Point(x: 150, y: y))
+    
+}
+
+
+//Drawing a rectangle that goes from blue to black
+//iterate over the x values to draw vertical lines
+for x in stride(from: 150,
+                through: 350,
+                by: 1) {
+    
+    //see the x values for reference
+    x
+    
+    //set the colours
+    let currentColor = Color.init(hue: 240, saturation: 100, brightness: x, alpha: 100)
+    canvas.lineColor = currentColor
+    
+    //change line width
+    canvas.defaultLineWidth = 100
+    
+    //draw the lines
+    canvas.drawLine(from: Point(x: x, y: 350), to: Point(x: x, y: 350))
+}
 /*:
  ## Show the Live View
  Don't see any results?
