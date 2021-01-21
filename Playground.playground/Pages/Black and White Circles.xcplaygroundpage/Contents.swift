@@ -161,7 +161,7 @@ for value in stride(from: 300,
 
 
 
-//Drawing funky circles
+//Drawing the circles
 // loop y
 for y in stride(from: 0,
                 to: 600,
