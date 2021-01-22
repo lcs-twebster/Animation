@@ -36,12 +36,73 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Drawing a horse head
+// Drawing a horse head with rainbow triangle fill
 
 //axes and scale
 canvas.drawAxes(withScale: true, by: 50)
 
-//drawing the black outline
+
+// drawing the  right-side-up triangles
+// loop y
+for y in stride(from: 0,
+                through: 600,
+                by: 50){
+    y
+
+// loop x
+    for x in stride(from: 0,
+                    through: 600,
+                    by: 50){
+    x
+        
+    // making the triangle colours
+        if y.isMultiple(of: 50){
+            canvas.fillColor = Color.init(hue: 0, saturation: 15, brightness: 100, alpha: 100)
+        } else {
+            canvas.fillColor = Color.init(hue: 160, saturation: 80, brightness: 80, alpha: 100)
+        }
+        
+        
+        
+// draw the triangles
+        var verticesOfShape2: [Point] = []
+        verticesOfShape2.append(Point(x: x, y: y))
+        verticesOfShape2.append(Point(x: x + 50, y: y))
+        verticesOfShape2.append(Point(x: x + 25, y: y + 50))
+        verticesOfShape2.append(Point(x: x, y: y))
+        canvas.drawCustomShape(with: verticesOfShape2)
+    }}
+
+
+//drawing the up-side-down triangles
+//loop y
+canvas.fillColor = Color.blue
+
+for y in stride(from: 0,
+                through: 600,
+                by: 50) {
+    y
+    
+    //loop x
+    for x in stride(from: 0, through: 600, by: 50){
+    x
+        
+    //draw the triangles
+        var verticesOfShape3: [Point] = []
+        verticesOfShape3.append(Point(x: x, y: y))
+        verticesOfShape3.append(Point(x: x - 25, y: y + 50))
+        verticesOfShape3.append(Point(x: x + 25, y: y + 50))
+        verticesOfShape3.append(Point(x: x, y: y))
+        canvas.drawCustomShape(with: verticesOfShape3)
+    }}
+
+
+
+
+
+
+
+//drawing the dark grey outline
 canvas.fillColor = Color.init(hue: 10, saturation: 10, brightness: 15, alpha: 100)
 
 var verticesOfShape1: [Point] = []
