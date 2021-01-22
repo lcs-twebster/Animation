@@ -56,10 +56,11 @@ for y in stride(from: 0,
     x
         
     // making the triangle colours
-        if y.isMultiple(of: 50){
-            canvas.fillColor = Color.init(hue: 0, saturation: 15, brightness: 100, alpha: 100)
+     
+        if x == 0 || x == 100 || x == 200 || x == 300 || x == 400 || x == 500 || x == 600 {
+            canvas.fillColor = Color.init(hue: 0, saturation: 25, brightness: 100, alpha: 100)
         } else {
-            canvas.fillColor = Color.init(hue: 160, saturation: 80, brightness: 80, alpha: 100)
+            canvas.fillColor = Color.init(hue: 150, saturation: 80, brightness: 80, alpha: 100)
         }
         
         
@@ -86,6 +87,20 @@ for y in stride(from: 0,
     //loop x
     for x in stride(from: 0, through: 600, by: 50){
     x
+        
+        // making the triangle colours
+         
+            if x == 50 || x == 150 || x == 250 || x == 350 || x == 450 || x == 550 {
+                canvas.fillColor = Color.init(hue: 340, saturation: 25, brightness: 30, alpha: 100)
+            } else {
+                canvas.fillColor = Color.init(hue: 165, saturation: 42, brightness: 42, alpha: 100)
+            }
+        
+     // making the triangle colours
+        if y == 100 || y == 200 || y == 300 || y == 400 || y == 500 || y == 600 {
+            canvas.fillColor = Color.init(hue: 200, saturation: 75, brightness: 80, alpha: 100)
+        }
+        
         
     //draw the triangles
         var verticesOfShape3: [Point] = []
