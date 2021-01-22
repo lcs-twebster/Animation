@@ -36,9 +36,36 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+// Drawing a horse head
 
+//axes and scale
+canvas.drawAxes(withScale: true, by: 50)
+
+//drawing the black outline
+canvas.fillColor = Color.init(hue: 10, saturation: 10, brightness: 15, alpha: 100)
+
+var verticesOfShape1: [Point] = []
+verticesOfShape1.append(Point(x: 0, y: 85))
+verticesOfShape1.append(Point(x: 165, y: 225))
+verticesOfShape1.append(Point(x: 215, y: 225))
+verticesOfShape1.append(Point(x: 235, y: 210))
+verticesOfShape1.append(Point(x: 265, y: 205))
+verticesOfShape1.append(Point(x: 365, y: 155))
+verticesOfShape1.append(Point(x: 375, y: 130))
+verticesOfShape1.append(Point(x: 420, y: 135))
+verticesOfShape1.append(Point(x: 450, y: 150))
+verticesOfShape1.append(Point(x: 475, y: 200))
+verticesOfShape1.append(Point(x: 300, y: 425))
+verticesOfShape1.append(Point(x: 325, y: 500))
+verticesOfShape1.append(Point(x: 225, y: 435))
+verticesOfShape1.append(Point(x: 165, y: 430))
+verticesOfShape1.append(Point(x: 0, y: 380))
+verticesOfShape1.append(Point(x: 0, y: 600))
+verticesOfShape1.append(Point(x: 600, y: 600))
+verticesOfShape1.append(Point(x: 600, y: 0))
+verticesOfShape1.append(Point(x: 0, y: 0))
+verticesOfShape1.append(Point(x: 0, y: 85))
+canvas.drawCustomShape(with: verticesOfShape1)
 /*:
  ## Show the Live View
  Don't see any results?
