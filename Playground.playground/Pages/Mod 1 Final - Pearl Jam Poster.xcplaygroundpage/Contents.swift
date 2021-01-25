@@ -41,13 +41,23 @@ PlaygroundPage.current.liveView = canvas
 // Axes + Scale
 canvas.drawAxes(withScale: true, by: 50)
 
-//Draw the "Pearl Jam" text
-canvas.textColor = Color.init(hue: 0, saturation: 75, brightness: 85, alpha: 100)
-canvas.drawText(message: "PEARL JAM", at: Point(x: 30, y: 100), size: 60, kerning: 0)
+//Draw the black background
+canvas.drawRectangle(at: Point(x: 0, y: 200), width: 400, height: 400)
 
-//draw the "lightning bolt" text
-canvas.fillColor = Color.black
-canvas.drawText(message: "LIGHTnInG BoLT", at: Point(x: 25, y: 50), size: 40, kerning: 3)
+//draw the white background
+canvas.fillColor = Color.white
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
+
+//Draw the "Pearl" text
+canvas.textColor = Color.red
+canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2)
+
+//Draw the "Jam" text
+canvas.drawText(message: "JAM", at: Point(x: 220, y: 40), size: 70, kerning: 2)
+
+
+
+
 
 
 
