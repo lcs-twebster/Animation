@@ -64,13 +64,12 @@ canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1
 canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1: Point(x: 200, y: 315), control2: Point(x: 200, y: 315))
 
 //Fill in the eye white
-canvas.drawEllipse(at: Point(x: 200, y: 400), width: 200, height: 100)
-canvas.drawEllipse(at: Point(x: 100, y: 400), width: 70, height: 45)
-canvas.drawEllipse(at: Point(x: 65, y: 400), width: 20, height: 20)
-
-
-
-
+canvas.defaultLineWidth = 20
+canvas.drawLine(from: Point(x: 100, y: 400), to: Point(x: 300, y: 400))
+canvas.drawLine(from: Point(x: 110, y: 390), to: Point(x: 290, y: 390))
+canvas.drawLine(from: Point(x: 120, y: 380), to: Point(x: 280, y: 380))
+canvas.drawLine(from: Point(x: 140, y: 370), to: Point(x: 260, y: 370))
+canvas.drawLine(from: Point(x: 150, y: 360), to: Point(x: 240, y: 360))
 
 
 
