@@ -46,7 +46,7 @@ canvas.drawRectangle(at: Point(x: 0, y: 200), width: 400, height: 400)
 
 //draw the white background
 canvas.fillColor = Color.white
-canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
+//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
 
 //Draw the "Pearl" text
 canvas.textColor = Color.red
@@ -55,6 +55,18 @@ canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2
 //Draw the "Jam" text
 canvas.drawText(message: "JAM", at: Point(x: 220, y: 40), size: 70, kerning: 2)
 
+//draw the top eye white curve
+canvas.lineColor = Color.white
+canvas.defaultLineWidth = 5
+canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1: Point(x: 200, y: 485), control2: Point(x: 200, y: 485))
+
+//draw bottom eye white curve
+canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1: Point(x: 200, y: 315), control2: Point(x: 200, y: 315))
+
+//Fill in the eye white
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 200, height: 100)
+canvas.drawEllipse(at: Point(x: 100, y: 400), width: 70, height: 45)
+canvas.drawEllipse(at: Point(x: 65, y: 400), width: 20, height: 20)
 
 
 
