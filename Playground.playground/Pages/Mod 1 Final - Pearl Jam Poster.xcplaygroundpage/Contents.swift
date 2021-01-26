@@ -38,15 +38,19 @@ PlaygroundPage.current.liveView = canvas
 
 // Pearl Jam Poster
 
+
+
 // Axes + Scale
 canvas.drawAxes(withScale: true, by: 50)
+
+
 
 //Draw the black background
 for y in stride(from: 200, through: 600, by: 1){
     y
     
     //set brightness
-    let brightness = map(value: Double(y), fromLower: 200, fromUpper: 600, toLower: 0, toUpper: 25)
+    let brightness = map(value: Double(y), fromLower: 200, fromUpper: 600, toLower: 0, toUpper: 30)
     
     //set colour
     let color = Color.init(hue: 0, saturation: 0, brightness: Int(brightness), alpha: 100)
@@ -57,10 +61,27 @@ for y in stride(from: 200, through: 600, by: 1){
     canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
 }
 
-//draw the white background
-canvas.fillColor = Color.white
-canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
 
+
+//draw the white background
+//loop y
+for y in stride(from: 0, through: 200, by: 1){
+    y
+    
+//set saturation
+    let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 5)
+    
+//set brightness
+    let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 95, toUpper: 100)
+    
+//set colour
+    let color = Color.init(hue: 60, saturation: Int(saturation), brightness: Int(brightness), alpha: 100)
+    canvas.lineColor = color
+    
+//draw the lines
+    canvas.defaultLineWidth = 10
+    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
+}
 
 
 //drawing lightning bolt background pattern
@@ -77,26 +98,28 @@ for y in stride(from: 0,
         
         //"if" statements for different reds (x)
         if x.isMultiple(of: 150){
-            canvas.fillColor = Color.init(hue: 150,
+            canvas.fillColor = Color.init(hue: 0,
                                           saturation: 100,
                                           brightness: 80,
                                           alpha: 70)
         } else {
-            canvas.fillColor = Color.init(hue: 200,
+            canvas.fillColor = Color.init(hue: 2,
                                                saturation: 100,
-                                               brightness: 100,
+                                               brightness: 95,
                                                alpha: 50)
             
         }
         
         //if statements for different reds (y)
         if y .isMultiple(of: 150){
-            canvas.fillColor = Color.init(hue: 100,
+            canvas.fillColor = Color.init(hue: 5,
                                           saturation: 80,
                                           brightness: 100,
                                           alpha: 85)
         }
-        
+        //borders
+        canvas.drawShapesWithBorders = true
+        canvas.borderColor = Color.init(hue: 10, saturation: 10, brightness: 100, alpha: 75)
         //draw the lightning bolt
         var verticesOfShape1: [Point] = []
         verticesOfShape1.append(Point(x: x + 70, y: y + 15))
@@ -112,30 +135,31 @@ for y in stride(from: 0,
 
 
 
-
-
-
-
-
-
-
-
-
-
 //Draw the "Pearl" text
 canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
 canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2)
 
+
+
 //Draw the "Jam" text
 canvas.drawText(message: "JAM", at: Point(x: 220, y: 40), size: 70, kerning: 2)
+
+
+//get rid of borders
+canvas.drawShapesWithBorders = false
+
 
 //draw the top eye white curve
 canvas.lineColor = Color.white
 canvas.defaultLineWidth = 5
 canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1: Point(x: 200, y: 485), control2: Point(x: 200, y: 485))
 
+
+
 //draw bottom eye white curve
 canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1: Point(x: 200, y: 315), control2: Point(x: 200, y: 315))
+
+
 
 //Fill in the eye white
 canvas.defaultLineWidth = 20
@@ -161,13 +185,18 @@ canvas.drawLine(from: Point(x: 240, y: 353), to: Point(x: 325, y: 395))
 canvas.drawLine(from: Point(x: 240, y: 445), to: Point(x: 325, y: 405))
 canvas.drawEllipse(at: Point(x: 275, y: 400), width: 150, height: 30)
 
+
 //draw outer eye circle
 canvas.fillColor = Color.init(hue: 0, saturation: 75, brightness: 100, alpha: 100)
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 125, height: 125)
 
+
+
 //drawing middle eye circle
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 50, alpha: 100)
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height: 100)
+
+
 
 // drawing center eye circle
 canvas.fillColor = Color.black
