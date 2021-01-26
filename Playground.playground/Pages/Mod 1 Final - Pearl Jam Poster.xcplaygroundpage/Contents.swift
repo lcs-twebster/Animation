@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
@@ -33,7 +33,7 @@ PlaygroundPage.current.liveView = canvas
  You can remove the code on line 49 and begin writing your own code.
  
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 // Pearl Jam Poster
@@ -69,36 +69,46 @@ for y in stride(from: 0,
                 through: 600, by:
                     100){
     y
-//loop x
-for x in stride(from: 0,
-                through: 400,
-                by: 75){
-    x
-    
-//"if" statements for different reds (x)
-    if x == 70 || x == 220 || x == 370{
-        canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 80, alpha: 100)
-    } else { canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 70, alpha: 100)}
-
-//if statements for different reds (y)
-    if y == 15 || y == 215 || y == 415{
-        canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 100, alpha: 100)
-    } else {
-        canvas.fillColor = Color.init(hue: 0, saturation: 80, brightness: 90, alpha: 50)
-    }
-    
-    //draw the lightning bolt
-var verticesOfShape1: [Point] = []
-verticesOfShape1.append(Point(x: x + 70, y: y + 15))
-verticesOfShape1.append(Point(x: x + 45, y: y + 40))
-verticesOfShape1.append(Point(x: x + 65, y: y + 50))
-verticesOfShape1.append(Point(x: x + 15, y: y + 85))
-verticesOfShape1.append(Point(x: x + 35, y: y + 55))
-verticesOfShape1.append(Point(x: x + 25, y: y + 45))
-verticesOfShape1.append(Point(x: x + 70, y: y + 15))
-canvas.drawCustomShape(with: verticesOfShape1)
-    
-}}
+    //loop x
+    for x in stride(from: 0,
+                    through: 400,
+                    by: 75){
+        x
+        
+        //"if" statements for different reds (x)
+        if x.isMultiple(of: 150){
+            canvas.fillColor = Color.init(hue: 150,
+                                          saturation: 100,
+                                          brightness: 80,
+                                          alpha: 70)
+        } else {
+            canvas.fillColor = Color.init(hue: 200,
+                                               saturation: 100,
+                                               brightness: 100,
+                                               alpha: 50)
+            
+        }
+        
+        //if statements for different reds (y)
+        if y .isMultiple(of: 150){
+            canvas.fillColor = Color.init(hue: 100,
+                                          saturation: 80,
+                                          brightness: 100,
+                                          alpha: 85)
+        }
+        
+        //draw the lightning bolt
+        var verticesOfShape1: [Point] = []
+        verticesOfShape1.append(Point(x: x + 70, y: y + 15))
+        verticesOfShape1.append(Point(x: x + 45, y: y + 40))
+        verticesOfShape1.append(Point(x: x + 65, y: y + 50))
+        verticesOfShape1.append(Point(x: x + 15, y: y + 85))
+        verticesOfShape1.append(Point(x: x + 35, y: y + 55))
+        verticesOfShape1.append(Point(x: x + 25, y: y + 45))
+        verticesOfShape1.append(Point(x: x + 70, y: y + 15))
+        canvas.drawCustomShape(with: verticesOfShape1)
+        
+    }}
 
 
 
@@ -182,7 +192,7 @@ canvas.drawEllipse(at: Point(x: 200, y: 400), width: 75, height: 75)
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
