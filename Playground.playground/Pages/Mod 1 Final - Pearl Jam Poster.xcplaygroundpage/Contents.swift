@@ -62,7 +62,28 @@ for x in stride(from: 0,
                 by: 75){
     x
 
-//set the hue
+//"if" statements for different reds (x)
+    if x == 70 || x == 220 || x == 370{
+        canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 80, alpha: 100)
+    } else { canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 70, alpha: 100)}
+
+//if statements for different reds (y)
+    if y == 15 || y == 215 || y == 415{
+        canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 100, alpha: 100)
+    } else {
+        canvas.fillColor = Color.init(hue: 0, saturation: 80, brightness: 90, alpha: 50)
+    }
+    
+    //draw the lightning bolt
+var verticesOfShape1: [Point] = []
+verticesOfShape1.append(Point(x: x + 70, y: y + 15))
+verticesOfShape1.append(Point(x: x + 45, y: y + 40))
+verticesOfShape1.append(Point(x: x + 65, y: y + 50))
+verticesOfShape1.append(Point(x: x + 15, y: y + 85))
+verticesOfShape1.append(Point(x: x + 35, y: y + 55))
+verticesOfShape1.append(Point(x: x + 25, y: y + 45))
+verticesOfShape1.append(Point(x: x + 70, y: y + 15))
+canvas.drawCustomShape(with: verticesOfShape1)
     
 }}
 
@@ -95,6 +116,7 @@ canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1
 
 //Fill in the eye white
 canvas.defaultLineWidth = 20
+canvas.fillColor = Color.white
 canvas.drawLine(from: Point(x: 100, y: 400), to: Point(x: 300, y: 400))
 canvas.drawLine(from: Point(x: 110, y: 390), to: Point(x: 290, y: 390))
 canvas.drawLine(from: Point(x: 120, y: 380), to: Point(x: 280, y: 380))
