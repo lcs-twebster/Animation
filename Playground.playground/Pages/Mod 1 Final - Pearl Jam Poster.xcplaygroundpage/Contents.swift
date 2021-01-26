@@ -46,7 +46,7 @@ canvas.drawRectangle(at: Point(x: 0, y: 200), width: 400, height: 400)
 
 //draw the white background
 canvas.fillColor = Color.white
-//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
 
 //Draw the "Pearl" text
 canvas.textColor = Color.red
@@ -85,6 +85,8 @@ canvas.drawEllipse(at: Point(x: 135, y: 365), width: 22, height: 22)
 canvas.drawLine(from: Point(x: 240, y: 353), to: Point(x: 325, y: 395))
 canvas.drawLine(from: Point(x: 240, y: 445), to: Point(x: 325, y: 405))
 canvas.drawEllipse(at: Point(x: 275, y: 400), width: 150, height: 30)
+
+
 
 
 
