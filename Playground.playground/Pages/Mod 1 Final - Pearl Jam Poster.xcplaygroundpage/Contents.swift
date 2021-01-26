@@ -70,7 +70,21 @@ canvas.drawLine(from: Point(x: 110, y: 390), to: Point(x: 290, y: 390))
 canvas.drawLine(from: Point(x: 120, y: 380), to: Point(x: 280, y: 380))
 canvas.drawLine(from: Point(x: 140, y: 370), to: Point(x: 260, y: 370))
 canvas.drawLine(from: Point(x: 150, y: 360), to: Point(x: 240, y: 360))
-
+canvas.drawEllipse(at: Point(x: 200, y: 350), width: 100, height: 25)
+canvas.drawLine(from: Point(x: 110, y: 410), to: Point(x: 290, y: 410))
+canvas.drawLine(from: Point(x: 120, y: 420), to: Point(x: 280, y: 420))
+canvas.drawLine(from: Point(x: 140, y: 430), to: Point(x: 260, y: 430))
+canvas.drawLine(from: Point(x: 160, y: 440), to: Point(x: 240, y: 440))
+canvas.drawEllipse(at: Point(x: 200, y: 450), width: 100, height: 25)
+canvas.drawLine(from: Point(x: 75, y: 400), to: Point(x: 125, y: 430))
+canvas.drawLine(from: Point(x: 75, y: 400), to: Point(x: 125, y: 370))
+canvas.drawEllipse(at: Point(x: 70, y: 400), width: 30, height: 14)
+canvas.drawEllipse(at: Point(x: 135, y: 435), width: 35, height: 20)
+canvas.drawEllipse(at: Point(x: 145, y: 440), width: 22, height: 22)
+canvas.drawEllipse(at: Point(x: 135, y: 365), width: 22, height: 22)
+canvas.drawLine(from: Point(x: 240, y: 353), to: Point(x: 325, y: 395))
+canvas.drawLine(from: Point(x: 240, y: 445), to: Point(x: 325, y: 405))
+canvas.drawEllipse(at: Point(x: 275, y: 400), width: 150, height: 30)
 
 
 
