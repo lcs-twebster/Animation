@@ -48,8 +48,38 @@ canvas.drawRectangle(at: Point(x: 0, y: 200), width: 400, height: 400)
 canvas.fillColor = Color.white
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 200)
 
+
+
+//drawing lightning bolt background pattern
+//loop y
+for y in stride(from: 0,
+                through: 600, by:
+                    100){
+    y
+//loop x
+for x in stride(from: 0,
+                through: 400,
+                by: 75){
+    x
+
+//set the hue
+    
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Draw the "Pearl" text
-canvas.textColor = Color.red
+canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
 canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2)
 
 //Draw the "Jam" text
@@ -85,6 +115,18 @@ canvas.drawEllipse(at: Point(x: 135, y: 365), width: 22, height: 22)
 canvas.drawLine(from: Point(x: 240, y: 353), to: Point(x: 325, y: 395))
 canvas.drawLine(from: Point(x: 240, y: 445), to: Point(x: 325, y: 405))
 canvas.drawEllipse(at: Point(x: 275, y: 400), width: 150, height: 30)
+
+//draw outer eye circle
+canvas.fillColor = Color.init(hue: 0, saturation: 75, brightness: 100, alpha: 100)
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 125, height: 125)
+
+//drawing middle eye circle
+canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 50, alpha: 100)
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height: 100)
+
+// drawing center eye circle
+canvas.fillColor = Color.black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 75, height: 75)
 
 
 
