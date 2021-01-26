@@ -42,7 +42,20 @@ PlaygroundPage.current.liveView = canvas
 canvas.drawAxes(withScale: true, by: 50)
 
 //Draw the black background
-canvas.drawRectangle(at: Point(x: 0, y: 200), width: 400, height: 400)
+for y in stride(from: 200, through: 600, by: 1){
+    y
+    
+    //set brightness
+    let brightness = map(value: Double(y), fromLower: 200, fromUpper: 600, toLower: 0, toUpper: 25)
+    
+    //set colour
+    let color = Color.init(hue: 0, saturation: 0, brightness: Int(brightness), alpha: 100)
+    canvas.lineColor = color
+    
+    //draw the lines
+    canvas.defaultLineWidth = 15
+    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
+}
 
 //draw the white background
 canvas.fillColor = Color.white
@@ -61,7 +74,7 @@ for x in stride(from: 0,
                 through: 400,
                 by: 75){
     x
-
+    
 //"if" statements for different reds (x)
     if x == 70 || x == 220 || x == 370{
         canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 80, alpha: 100)
