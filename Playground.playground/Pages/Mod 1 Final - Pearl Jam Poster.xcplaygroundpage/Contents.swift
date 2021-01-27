@@ -45,6 +45,8 @@ canvas.drawAxes(withScale: true, by: 50)
 
 
 
+//high performance
+canvas.highPerformance = true
 //Draw the black background
 for y in stride(from: 200, through: 600, by: 1){
     y
@@ -60,8 +62,13 @@ for y in stride(from: 200, through: 600, by: 1){
     canvas.defaultLineWidth = 15
     canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
 }
+canvas.highPerformance = false
 
 
+
+
+//high performance
+canvas.highPerformance = true
 
 //draw the white background
 //loop y
@@ -82,7 +89,13 @@ for y in stride(from: 0, through: 200, by: 1){
     canvas.defaultLineWidth = 10
     canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
 }
+canvas.highPerformance = false
 
+
+
+
+//high performance
+canvas.highPerformance = true
 
 //drawing lightning bolt background pattern
 //loop y
@@ -119,6 +132,7 @@ for y in stride(from: 0,
         }
         //borders
         canvas.drawShapesWithBorders = true
+        canvas.defaultBorderWidth = 3
         canvas.borderColor = Color.init(hue: 10, saturation: 10, brightness: 100, alpha: 75)
         //draw the lightning bolt
         var verticesOfShape1: [Point] = []
@@ -132,17 +146,58 @@ for y in stride(from: 0,
         canvas.drawCustomShape(with: verticesOfShape1)
         
     }}
+canvas.highPerformance = false
 
+
+
+
+//draw the white background
+canvas.highPerformance = true
+//loop y
+for y in stride(from: 0, through: 200, by: 1){
+    y
+    
+//set saturation
+    let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 5)
+    
+//set brightness
+    let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 95, toUpper: 100)
+    
+//set colour
+    let color = Color.init(hue: 60, saturation: Int(saturation), brightness: Int(brightness), alpha: 100)
+    canvas.lineColor = color
+    
+//draw the lines
+    canvas.defaultLineWidth = 10
+    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
+}
+canvas.highPerformance = false
+
+//draw the wifi curves
+canvas.lineColor = Color.init(hue: 10, saturation: 10, brightness: 10, alpha: 25)
+canvas.defaultLineWidth = 8
+canvas.drawCurve(from: Point(x: 50, y: 125), to: Point(x: 350, y: 125), control1: Point(x: 125, y: 220), control2: Point(x: 275, y: 220))
+
+canvas.drawCurve(from: Point(x: 75, y: 110), to: Point(x: 325, y: 110), control1: Point(x: 150, y: 200), control2: Point(x: 250, y: 200))
+
+canvas.drawCurve(from: Point(x: 100, y: 85), to: Point(x: 300, y: 85), control1: Point(x: 175, y: 170), control2: Point(x: 225, y: 170))
 
 
 //Draw the "Pearl" text
-canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
-canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2)
+//canvas.textColor = Color.black
+//canvas.drawText(message: "PEARL", at: Point(x: 29, y: 106), size: 70, kerning: 2)
+
+//canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
+//canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2)
 
 
 
 //Draw the "Jam" text
-canvas.drawText(message: "JAM", at: Point(x: 220, y: 40), size: 70, kerning: 2)
+//canvas.textColor = Color.black
+//canvas.drawText(message: "JAM", at: Point(x: 224, y: 36), size: 70, kerning: 2)
+
+//canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
+//canvas.drawText(message: "JAM", at: Point(x: 220, y: 40), size: 70, kerning: 2)
 
 
 //get rid of borders
@@ -186,6 +241,14 @@ canvas.drawLine(from: Point(x: 240, y: 445), to: Point(x: 325, y: 405))
 canvas.drawEllipse(at: Point(x: 275, y: 400), width: 150, height: 30)
 
 
+
+
+//add thin black borders
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 1
+
+
 //draw outer eye circle
 canvas.fillColor = Color.init(hue: 0, saturation: 75, brightness: 100, alpha: 100)
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 125, height: 125)
@@ -201,6 +264,7 @@ canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height: 100)
 // drawing center eye circle
 canvas.fillColor = Color.black
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 75, height: 75)
+
 
 
 
