@@ -173,31 +173,43 @@ for y in stride(from: 0, through: 200, by: 1){
 }
 canvas.highPerformance = false
 
+
+
+
 //draw the wifi curves
-canvas.lineColor = Color.init(hue: 10, saturation: 10, brightness: 10, alpha: 25)
+canvas.lineColor = Color.init(hue: 10, saturation: 10, brightness: 10, alpha: 40)
+
+canvas.defaultLineWidth = 9
+canvas.drawCurve(from: Point(x: 50, y: 115), to: Point(x: 350, y: 115), control1: Point(x: 125, y: 215), control2: Point(x: 275, y: 215))
+
 canvas.defaultLineWidth = 8
-canvas.drawCurve(from: Point(x: 50, y: 125), to: Point(x: 350, y: 125), control1: Point(x: 125, y: 220), control2: Point(x: 275, y: 220))
+canvas.drawCurve(from: Point(x: 75, y: 85), to: Point(x: 325, y: 85), control1: Point(x: 150, y: 175), control2: Point(x: 250, y: 175))
 
-canvas.drawCurve(from: Point(x: 75, y: 110), to: Point(x: 325, y: 110), control1: Point(x: 150, y: 200), control2: Point(x: 250, y: 200))
+canvas.defaultLineWidth = 7
+canvas.drawCurve(from: Point(x: 105, y: 65), to: Point(x: 295, y: 65), control1: Point(x: 175, y: 135), control2: Point(x: 225, y: 135))
 
-canvas.drawCurve(from: Point(x: 100, y: 85), to: Point(x: 300, y: 85), control1: Point(x: 175, y: 170), control2: Point(x: 225, y: 170))
+canvas.defaultLineWidth = 6
+canvas.drawCurve(from: Point(x: 135, y: 40), to: Point(x: 265, y: 40), control1: Point(x: 185, y: 90), control2: Point(x: 215, y: 90))
+
+
+
 
 
 //Draw the "Pearl" text
-//canvas.textColor = Color.black
-//canvas.drawText(message: "PEARL", at: Point(x: 29, y: 106), size: 70, kerning: 2)
+canvas.textColor = Color.black
+canvas.drawText(message: "PEARL", at: Point(x: 79, y: 106), size: 71, kerning: 2)
 
-//canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
-//canvas.drawText(message: "PEARL", at: Point(x: 25, y: 110), size: 70, kerning: 2)
+canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
+canvas.drawText(message: "PEARL", at: Point(x: 75, y: 110), size: 70, kerning: 2)
 
 
 
 //Draw the "Jam" text
-//canvas.textColor = Color.black
-//canvas.drawText(message: "JAM", at: Point(x: 224, y: 36), size: 70, kerning: 2)
+canvas.textColor = Color.black
+canvas.drawText(message: "JAM", at: Point(x: 114, y: 36), size: 71, kerning: 2)
 
-//canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
-//canvas.drawText(message: "JAM", at: Point(x: 220, y: 40), size: 70, kerning: 2)
+canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 100)
+canvas.drawText(message: "JAM", at: Point(x: 110, y: 40), size: 70, kerning: 2)
 
 
 //get rid of borders
