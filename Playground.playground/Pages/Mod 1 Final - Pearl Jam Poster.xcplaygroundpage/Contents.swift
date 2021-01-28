@@ -111,15 +111,15 @@ for y in stride(from: 0,
         
         //"if" statements for different reds (x)
         if x.isMultiple(of: 150){
-            canvas.fillColor = Color.init(hue: 0,
+            canvas.fillColor = Color.init(hue: 1,
                                           saturation: 100,
-                                          brightness: 80,
-                                          alpha: 70)
+                                          brightness: 90,
+                                          alpha: 90)
         } else {
-            canvas.fillColor = Color.init(hue: 2,
+            canvas.fillColor = Color.init(hue: 345,
                                                saturation: 100,
-                                               brightness: 95,
-                                               alpha: 50)
+                                               brightness: 75,
+                                               alpha: 90)
             
         }
         
@@ -128,7 +128,7 @@ for y in stride(from: 0,
             canvas.fillColor = Color.init(hue: 5,
                                           saturation: 80,
                                           brightness: 100,
-                                          alpha: 85)
+                                          alpha: 100)
         }
         //borders
         canvas.drawShapesWithBorders = true
