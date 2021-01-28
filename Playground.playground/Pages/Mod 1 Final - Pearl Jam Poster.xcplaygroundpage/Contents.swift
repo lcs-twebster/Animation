@@ -68,28 +68,28 @@ canvas.highPerformance = false
 
 
 //high performance
-canvas.highPerformance = true
+//canvas.highPerformance = true
 
 //draw the white background
 //loop y
-for y in stride(from: 0, through: 200, by: 1){
-    y
+//for y in stride(from: 0, through: 200, by: 1){
+  //  y
     
 //set saturation
-    let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 5)
+   // let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 5)
     
 //set brightness
-    let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 95, toUpper: 100)
+    //let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 95, toUpper: 100)
     
 //set colour
-    let color = Color.init(hue: 60, saturation: Int(saturation), brightness: Int(brightness), alpha: 100)
-    canvas.lineColor = color
+    //let color = Color.init(hue: 60, saturation: Int(saturation), brightness: Int(brightness), alpha: 100)
+    //canvas.lineColor = color
     
 //draw the lines
-    canvas.defaultLineWidth = 10
-    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
-}
-canvas.highPerformance = false
+   // canvas.defaultLineWidth = 10
+   // canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
+//}
+//canvas.highPerformance = false
 
 
 
@@ -158,10 +158,10 @@ for y in stride(from: 0, through: 200, by: 1){
     y
     
 //set saturation
-    let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 5)
+    let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 10)
     
 //set brightness
-    let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 95, toUpper: 100)
+    let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 80, toUpper: 100)
     
 //set colour
     let color = Color.init(hue: 60, saturation: Int(saturation), brightness: Int(brightness), alpha: 100)
