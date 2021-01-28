@@ -277,11 +277,18 @@ canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height: 100)
 canvas.fillColor = Color.black
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 75, height: 75)
 
+//draw "air canada centre" text
+canvas.textColor = Color.black
+canvas.drawText(message: "Air Canada Centre,", at: Point(x: 15, y: 25), size: 10, kerning: 0)
 
+//draw "Toronto" text
+canvas.drawText(message: "Toronto", at: Point(x: 40, y: 10), size: 10, kerning: 0)
 
+//draw "May 10th" text
+canvas.drawText(message: "May 10th", at: Point(x: 340, y: 25), size: 10, kerning: 0)
 
-
-
+//draw "2006" text
+canvas.drawText(message: "2006", at: Point(x: 350, y: 10), size: 10, kerning: 0)
 
 
 
