@@ -36,7 +36,7 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Pearl Jam Poster
+// Pearl Jam Poster - Mod 1 Final Project
 
 
 
@@ -47,18 +47,21 @@ canvas.drawAxes(withScale: true, by: 50)
 
 //high performance
 canvas.highPerformance = true
+
 //Draw the black background
+
+//loop y
 for y in stride(from: 200, through: 600, by: 1){
     y
     
-    //set brightness
+//set brightness
     let brightness = map(value: Double(y), fromLower: 200, fromUpper: 600, toLower: 0, toUpper: 30)
     
-    //set colour
+//set colour
     let color = Color.init(hue: 0, saturation: 0, brightness: Int(brightness), alpha: 100)
     canvas.lineColor = color
     
-    //draw the lines
+//draw the lines
     canvas.defaultLineWidth = 15
     canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
 }
@@ -67,37 +70,13 @@ canvas.highPerformance = false
 
 
 
-//high performance
-//canvas.highPerformance = true
-
-//draw the white background
-//loop y
-//for y in stride(from: 0, through: 200, by: 1){
-  //  y
-    
-//set saturation
-   // let saturation = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 0, toUpper: 5)
-    
-//set brightness
-    //let brightness = map(value: Double(y), fromLower: 0, fromUpper: 200, toLower: 95, toUpper: 100)
-    
-//set colour
-    //let color = Color.init(hue: 60, saturation: Int(saturation), brightness: Int(brightness), alpha: 100)
-    //canvas.lineColor = color
-    
-//draw the lines
-   // canvas.defaultLineWidth = 10
-   // canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
-//}
-//canvas.highPerformance = false
-
-
 
 
 //high performance
 canvas.highPerformance = true
 
 //drawing lightning bolt background pattern
+
 //loop y
 for y in stride(from: 0,
                 through: 600, by:
@@ -109,7 +88,8 @@ for y in stride(from: 0,
                     by: 75){
         x
         
-        //"if" statements for different reds (x)
+//"if" statements for different reds (x)
+        
         if x.isMultiple(of: 150){
             canvas.fillColor = Color.init(hue: 1,
                                           saturation: 100,
@@ -123,18 +103,20 @@ for y in stride(from: 0,
             
         }
         
-        //if statements for different reds (y)
+//if statements for different reds (y)
+        
         if y .isMultiple(of: 150){
             canvas.fillColor = Color.init(hue: 5,
                                           saturation: 80,
                                           brightness: 100,
                                           alpha: 100)
         }
-        //borders
+//borders
         canvas.drawShapesWithBorders = true
         canvas.defaultBorderWidth = 3
         canvas.borderColor = Color.init(hue: 10, saturation: 10, brightness: 100, alpha: 75)
-        //draw the lightning bolt
+        
+//draw the lightning bolt
         var verticesOfShape1: [Point] = []
         verticesOfShape1.append(Point(x: x + 70, y: y + 15))
         verticesOfShape1.append(Point(x: x + 45, y: y + 40))
@@ -153,6 +135,7 @@ canvas.highPerformance = false
 
 //draw the white background
 canvas.highPerformance = true
+
 //loop y
 for y in stride(from: 0, through: 200, by: 1){
     y
@@ -212,6 +195,8 @@ canvas.textColor = Color.init(hue: 0, saturation: 100, brightness: 90, alpha: 10
 canvas.drawText(message: "JAM", at: Point(x: 110, y: 40), size: 70, kerning: 2)
 
 
+
+
 //get rid of borders
 canvas.drawShapesWithBorders = false
 
@@ -231,6 +216,7 @@ canvas.drawCurve(from: Point(x: 50, y: 400), to: Point(x: 350, y: 400), control1
 //Fill in the eye white
 canvas.defaultLineWidth = 20
 canvas.fillColor = Color.white
+
 canvas.drawLine(from: Point(x: 100, y: 400), to: Point(x: 300, y: 400))
 canvas.drawLine(from: Point(x: 110, y: 390), to: Point(x: 290, y: 390))
 canvas.drawLine(from: Point(x: 120, y: 380), to: Point(x: 280, y: 380))
@@ -266,31 +252,33 @@ canvas.fillColor = Color.init(hue: 0, saturation: 75, brightness: 100, alpha: 10
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 125, height: 125)
 
 
-
 //drawing middle eye circle
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 50, alpha: 100)
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height: 100)
-
 
 
 // drawing center eye circle
 canvas.fillColor = Color.black
 canvas.drawEllipse(at: Point(x: 200, y: 400), width: 75, height: 75)
 
+
+
+
 //draw "air canada centre" text
 canvas.textColor = Color.black
 canvas.drawText(message: "Air Canada Centre,", at: Point(x: 15, y: 25), size: 10, kerning: 0)
 
+
 //draw "Toronto" text
 canvas.drawText(message: "Toronto", at: Point(x: 40, y: 10), size: 10, kerning: 0)
+
 
 //draw "May 10th" text
 canvas.drawText(message: "May 10th", at: Point(x: 340, y: 25), size: 10, kerning: 0)
 
+
 //draw "2006" text
 canvas.drawText(message: "2006", at: Point(x: 350, y: 10), size: 10, kerning: 0)
-
-
 
 
 
