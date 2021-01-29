@@ -85,7 +85,7 @@ canvas.drawCurve(from: Point(x: 250, y: 375), to: Point(x: 250, y: 275), control
 
 //trunk
 canvas.defaultLineWidth = 20
-canvas.drawCurve(from: Point(x: 135, y: 325), to: Point(x: 150, y: 175), control1: Point(x: 100, y: 300), control2: Point(x: 100, y: 200))
+canvas.drawCurve(from: Point(x: 135, y: 320), to: Point(x: 150, y: 170), control1: Point(x: 100, y: 295), control2: Point(x: 100, y: 195))
 
 //mouth
 canvas.lineColor = Color.black
@@ -93,8 +93,11 @@ canvas.defaultLineWidth = 2
 canvas.drawCurve(from: Point(x: 167, y: 250), to: Point(x: 192, y: 260), control1: Point(x: 172, y: 245), control2: Point(x: 182, y: 245))
 
 //tail
-
-canvas.drawCurve(from: Point(x: 525, y: 275), to: Point(x: 560, y: 200), control1: Point(x: 570, y: 210), control2: Point(x: 500, y: 265))
+canvas.defaultLineWidth = 5
+canvas.lineColor = Color.init(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.drawCurve(from: Point(x: 548, y: 275), to: Point(x: 583, y: 200), control1: Point(x: 593, y: 210), control2: Point(x: 523, y: 265))
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.drawEllipse(at: Point(x: 585, y: 200), width: 15, height: 8)
 /*:
  ## Show the Live View
  Don't see any results?
